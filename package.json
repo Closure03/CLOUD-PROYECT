@@ -17,5 +17,8 @@
     "url": "https://github.com/Closure03/CLOUD-PROYECT/issues"
   },
   "homepage": "https://github.com/Closure03/CLOUD-PROYECT#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
