@@ -9,8 +9,11 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/health", (req, res) => {
-    res.json({ status: "ok", uptime: process.uptime() });
+app.get("/", (req, res) => {
+    res.json({
+        message: "Hello Cloud ☁️",
+        docs: ["/health", "/version"]
+    });
 });
 
 app.get("/version", (req, res) => {
