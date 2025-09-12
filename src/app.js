@@ -1,12 +1,22 @@
-import express from "express";
-
+import express from 'express';
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("¡Hola, mundo!");
+    res.json({
+        message: "Hello Cloud ☁️",
+        docs: "/health", "/version"
+    });
 });
 
-const PORT = 3000;
+app.get("/health", (req, res) => {
+    res.json({ status: "ok", uptime: process.uptime() });
+});
+
+app.get("/version", (req, res) => {
+    res.json({ name: "hello-cloud", version: "1.0.0" });
+});
+
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
