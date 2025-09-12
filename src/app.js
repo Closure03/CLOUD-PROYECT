@@ -5,15 +5,12 @@ const PORT = process.env.PORT || 3000;
 app.get("/", (req, res) => {
     res.json({
         message: "Hello Cloud ☁️",
-        docs: "/health", "/version"
+        docs: ["/health", "/version"]
     });
 });
 
-app.get("/", (req, res) => {
-    res.json({
-        message: "Hello Cloud ☁️",
-        docs: ["/health", "/version"]
-    });
+app.get("/health", (req, res) => {
+    res.json({ status: "ok", uptime: process.uptime() });
 });
 
 app.get("/version", (req, res) => {
