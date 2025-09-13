@@ -18,3 +18,5 @@ EXPOSE 3000
 
 # Comando para ejecutar la app
 CMD ["npm", "start"]
+
+
