@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Hello Cloud ☁️",
+        message: "Hello Cloud ☁️, Tatiana Fernandez Pineda y Santiago Garzon Silva",
         docs: ["/health", "/version"]
     });
 });
