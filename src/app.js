@@ -20,3 +20,5 @@ app.get("/version", (req, res) => {
 app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+// Export the app for testing purposes
