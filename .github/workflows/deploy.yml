@@ -35,4 +35,12 @@ jobs:
           docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:latest
           docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:${{ steps.vars.outputs.TAG }}
 
+
+
+
+
+
+
+
+
           
